@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Security.Cryptography;
 
 namespace Hackmaster_4e_GM_tools
 {
 
     public partial class TreasureForm : Form
     {
-        static readonly Random die = new Random();
         public TreasureForm()
         {
             InitializeComponent();
@@ -516,12 +516,10 @@ namespace Hackmaster_4e_GM_tools
             for (int i = 0; i < aclass; i++)
             {
                 //TODO: add non-gems
-                Thread.Sleep(1);
-                roll = die.Next(1,101);
+                roll = Dice.roll(100);
                 if (roll <= 60)
                 {
-                   Thread.Sleep(1);
-                   gems += die.Next(10, 41);
+                   gems += Dice.roll(40);
                 }
 
             }
@@ -529,12 +527,10 @@ namespace Hackmaster_4e_GM_tools
             for (int i = 0; i < bclass; i++)
             {
                 //TODO: add non-gems
-                Thread.Sleep(1);
-                roll = die.Next(1, 101);
+                roll = Dice.roll(100);
                 if (roll <= 30)
                 {
-                    Thread.Sleep(1);
-                    gems += die.Next(1, 9);
+                    gems += Dice.roll(8);
                 }
 
             }
@@ -542,12 +538,10 @@ namespace Hackmaster_4e_GM_tools
             for (int i = 0; i < cclass; i++)
             {
                 //TODO: add non-gems
-                Thread.Sleep(1);
-                roll = die.Next(1, 101);
+                roll = Dice.roll(100);
                 if (roll <= 25)
                 {
-                    Thread.Sleep(1);
-                    gems += die.Next(1, 7);
+                    gems += Dice.roll(6);
                 }
 
             }
@@ -555,12 +549,10 @@ namespace Hackmaster_4e_GM_tools
             for (int i = 0; i < dclass; i++)
             {
                 //TODO: add non-gems
-                Thread.Sleep(1);
-                roll = die.Next(1, 101);
+                roll = Dice.roll(100);
                 if (roll <= 30)
                 {
-                    Thread.Sleep(1);
-                    gems += die.Next(1, 11);
+                    gems += Dice.roll(10);
                 }
 
             }
@@ -568,12 +560,10 @@ namespace Hackmaster_4e_GM_tools
             for (int i = 0; i < eclass; i++)
             {
                 //TODO: add non-gems
-                Thread.Sleep(1);
-                roll = die.Next(1, 101);
+                roll = Dice.roll(100);
                 if (roll <= 15)
-                {
-                    Thread.Sleep(1);
-                    gems += die.Next(1, 13);
+                { 
+                    gems += Dice.roll(12);
                 }
 
             }
@@ -581,12 +571,12 @@ namespace Hackmaster_4e_GM_tools
             for (int i = 0; i < fclass; i++)
             {
                 //TODO: add non-gems
-                Thread.Sleep(1);
-                roll = die.Next(1, 101);
+                roll = Dice.roll(100);
                 if (roll <= 20)
                 {
-                    Thread.Sleep(1);
-                    gems += die.Next(2, 21);
+                    // 2d10 gems
+                    gems += Dice.roll(10);
+                    gems += Dice.roll(10);
                 }
 
             }
@@ -594,12 +584,13 @@ namespace Hackmaster_4e_GM_tools
             for (int i = 0; i < gclass; i++)
             {
                 //TODO: add non-gems
-                Thread.Sleep(1);
-                roll = die.Next(1, 101);
+                roll = Dice.roll(100);
                 if (roll <= 30)
                 {
-                    Thread.Sleep(1);
-                    gems += die.Next(3, 19);
+                    // 3d6 gems
+                    gems += Dice.roll(6);
+                    gems += Dice.roll(6);
+                    gems += Dice.roll(6);
                 }
 
             }
@@ -607,12 +598,13 @@ namespace Hackmaster_4e_GM_tools
             for (int i = 0; i < hclass; i++)
             {
                 //TODO: add non-gems
-                Thread.Sleep(1);
-                roll = die.Next(1, 101);
+                roll = Dice.roll(100);
                 if (roll <= 50)
                 {
-                    Thread.Sleep(1);
-                    gems += die.Next(3, 31);
+                    // 3d10 gmes
+                    gems += Dice.roll(10);
+                    gems += Dice.roll(10);
+                    gems += Dice.roll(10);
                 }
 
             }
@@ -620,12 +612,12 @@ namespace Hackmaster_4e_GM_tools
             for (int i = 0; i < iclass; i++)
             {
                 //TODO: add non-gems
-                Thread.Sleep(1);
-                roll = die.Next(1, 101);
+                roll = Dice.roll(100);
                 if (roll <= 55)
                 {
-                    Thread.Sleep(1);
-                    gems += die.Next(2, 13);
+                    // 2d6 gems
+                    gems += Dice.roll(6);
+                    gems += Dice.roll(6);
                 }
 
             }
@@ -643,7 +635,7 @@ namespace Hackmaster_4e_GM_tools
         public static string next()
         {
             Thread.Sleep(1);
-            int roll = die.Next(1, 101);
+            int roll = Dice.roll(100);
             int cur_val = 0;
             // 1-25 = val 6;
             // 26-50 = val 7;
@@ -655,7 +647,7 @@ namespace Hackmaster_4e_GM_tools
             if (roll <= 25)
             {
                 cur_val = 6;
-                roll = die.Next(1, 13);
+                roll = Dice.roll(12);
                 switch (roll)
                 {
                     case 1:
@@ -699,7 +691,7 @@ namespace Hackmaster_4e_GM_tools
             else if (roll > 25 && roll <= 50)
             {
                 cur_val = 7;
-                roll = die.Next(1, 13);
+                roll = Dice.roll(12);
                 switch (roll)
                 {
                     case 1:
@@ -743,7 +735,7 @@ namespace Hackmaster_4e_GM_tools
             else if (roll > 50 && roll <= 70)
             {
                 cur_val = 8;
-                roll = die.Next(1, 13);
+                roll = Dice.roll(12);
                 switch (roll)
                 {
                     case 1:
@@ -787,7 +779,7 @@ namespace Hackmaster_4e_GM_tools
             else if (roll > 70 && roll <= 90)
             {
                 cur_val = 9;
-                roll = die.Next(1, 7);
+                roll = Dice.roll(6);
                 switch (roll)
                 {
                     case 1:
@@ -813,7 +805,7 @@ namespace Hackmaster_4e_GM_tools
             else if (roll > 90 && roll <= 99)
             {
                 cur_val = 10;
-                roll = die.Next(1, 11);
+                roll = Dice.roll(10);
                 switch (roll)
                 {
                     case 1:
@@ -851,7 +843,7 @@ namespace Hackmaster_4e_GM_tools
             else if (roll == 100)
             {
                 cur_val = 11;
-                roll = die.Next(1, 7);
+                roll = Dice.roll(6);
                 switch (roll)
                 {
                     case 1:
@@ -879,7 +871,7 @@ namespace Hackmaster_4e_GM_tools
                 MessageBox.Show("Roll found no catagory: " + roll.ToString());
             }
             //Size roll
-            roll = die.Next(0,101);
+            roll = Dice.roll(100);
             if (roll <= 5)
             {
                 cur_val -= 3;
@@ -926,7 +918,7 @@ namespace Hackmaster_4e_GM_tools
             }
 
             // Quality roll
-            roll = die.Next(0, 101);
+            roll = Dice.roll(100);
             if (roll <= 5)
             {
                 cur_val -= 3;
@@ -982,6 +974,25 @@ namespace Hackmaster_4e_GM_tools
                 cur_val = 0;
             }
             return description + ". Value: " + values[cur_val];
+        }
+    }
+
+    public static class Dice
+    {
+        private static RNGCryptoServiceProvider rngCsp = new RNGCryptoServiceProvider();
+        public static byte roll(byte numberSides)
+        {
+            byte[] randomNumber = new byte[1];
+            do
+            {
+                rngCsp.GetBytes(randomNumber);
+            } while (!IsFairRoll(randomNumber[0], numberSides));
+            return (byte)((randomNumber[0] % numberSides) + 1);
+        }
+        public static bool IsFairRoll(byte roll, byte numSides)
+        {
+            int fullSetsOfValues = Byte.MaxValue / numSides;
+            return roll < numSides * fullSetsOfValues;
         }
     }
     public static class TextBoxCrementor
