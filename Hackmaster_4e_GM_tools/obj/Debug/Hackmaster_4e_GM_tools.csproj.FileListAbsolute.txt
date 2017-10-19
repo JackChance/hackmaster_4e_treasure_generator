@@ -1,0 +1,9 @@
+c:\users\cameron\documents\visual studio 2012\Projects\Hackmaster_4e_GM_tools\Hackmaster_4e_GM_tools\bin\Debug\Hackmaster_4e_GM_tools.exe.config
+c:\users\cameron\documents\visual studio 2012\Projects\Hackmaster_4e_GM_tools\Hackmaster_4e_GM_tools\bin\Debug\Hackmaster_4e_GM_tools.exe
+c:\users\cameron\documents\visual studio 2012\Projects\Hackmaster_4e_GM_tools\Hackmaster_4e_GM_tools\bin\Debug\Hackmaster_4e_GM_tools.pdb
+c:\users\cameron\documents\visual studio 2012\Projects\Hackmaster_4e_GM_tools\Hackmaster_4e_GM_tools\obj\Debug\Hackmaster_4e_GM_tools.csprojResolveAssemblyReference.cache
+c:\users\cameron\documents\visual studio 2012\Projects\Hackmaster_4e_GM_tools\Hackmaster_4e_GM_tools\obj\Debug\Hackmaster_4e_GM_tools.Properties.Resources.resources
+c:\users\cameron\documents\visual studio 2012\Projects\Hackmaster_4e_GM_tools\Hackmaster_4e_GM_tools\obj\Debug\Hackmaster_4e_GM_tools.csproj.GenerateResource.Cache
+c:\users\cameron\documents\visual studio 2012\Projects\Hackmaster_4e_GM_tools\Hackmaster_4e_GM_tools\obj\Debug\Hackmaster_4e_GM_tools.exe
+c:\users\cameron\documents\visual studio 2012\Projects\Hackmaster_4e_GM_tools\Hackmaster_4e_GM_tools\obj\Debug\Hackmaster_4e_GM_tools.pdb
+c:\users\cameron\documents\visual studio 2012\Projects\Hackmaster_4e_GM_tools\Hackmaster_4e_GM_tools\obj\Debug\Hackmaster_4e_GM_tools.TreasureForm.resources
